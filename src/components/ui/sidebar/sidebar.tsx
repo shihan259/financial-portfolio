@@ -1,0 +1,90 @@
+"use client";
+
+import * as React from "react";
+import { HandCoins, HeartPlus, LucideIcon, PiggyBank, Scroll } from "lucide-react";
+import ThemeSwitcher from "@/components/ui/sidebar/theme-switcher";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/shadcn-ui/collapsible";
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarRail,
+} from "@/components/shadcn-ui/sidebar";
+import ProfileSwitcher from "./profile-switcher";
+import { usePathname } from "next/navigation";
+import InsetNavGroup from "@/components/ui/sidebar/inset-nav-group";
+
+export type NavItem = {
+  title: string;
+  url: string;
+  icon?: LucideIcon;
+  items?: NavItem[]; // Optional nested items
+};
+
+export type NavGroup = {
+  title: string;
+  url: string;
+  icon?: LucideIcon;
+  items: NavItem[];
+};
+
+export type Navigation = {
+  navMain: NavGroup[];
+};
+
+const data: Navigation = {
+  navMain: [
+    // Insurance group
+    {
+      title: "Insurance",
+      url: "/insurance",
+      icon: Scroll,
+      items: [
+        {
+          title: "Coverage",
+          url: "/insurance/coverage",
+          icon: HeartPlus
+        },
+        {
+          title: "Savings",
+          url: "/insurance/savings",
+          icon: PiggyBank
+        },
+        {
+          title: "Investments",
+          url: "/insurance/investments",
+          icon: HandCoins
+        },
+      ],
+    },
+  ],
+};
+
+export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const pathName = usePathname();
+  return (
+    <Sidebar {...props}>
+      <SidebarHeader>
+        <ProfileSwitcher name={"John Doe"} />
+      </SidebarHeader>
+      <SidebarContent className="gap-0">
+        <InsetNavGroup navMain={data.navMain} />
+        <div className="mt-auto p-2">
+          <ThemeSwitcher />
+        </div>
+      </SidebarContent>
+
+      <SidebarRail />
+    </Sidebar>
+  );
+}
