@@ -1,3 +1,4 @@
+import PageContainer from "@/components/reusable/page-container";
 import OverviewTabs from "@/components/ui/insurance/overview/tabs";
 import NavHeader from "@/components/ui/nav-header/nav-header";
 
@@ -6,9 +7,9 @@ export default function Page() {
     <>
       <NavHeader currentPageTitle="Insurance" />
 
-      <div className="p-4">
+      <PageContainer>
         <OverviewTabs />
-      </div>
+      </PageContainer>
     </>
   );
 }

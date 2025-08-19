@@ -1,3 +1,6 @@
+import PageContainer from "@/components/reusable/page-container";
+import CoverageFilter from "@/components/ui/insurance/coverage/coverage-filter/coverage-filter";
+import CoverageList from "@/components/ui/insurance/coverage/coverage-list/coverage-list";
 import NavHeader from "@/components/ui/nav-header/nav-header";
 
 export default function Page() {
@@ -9,8 +12,10 @@ export default function Page() {
           Insurance: "/insurance",
         }}
       />
-      <div className="center">Insurance</div>
-      <p>asdasda</p>
+      <PageContainer>
+        <CoverageFilter />
+        <CoverageList />
+      </PageContainer>
     </>
   );
 }

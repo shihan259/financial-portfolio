@@ -66,90 +66,88 @@ export function RadialStackedChart() {
       config={chartConfig}
       className="mx-auto aspect-square w-full max-w-[250px] h-35"
     >
-      <ResponsiveContainer>
-        <RadialBarChart
-          data={chartData}
-          endAngle={180}
-          innerRadius={80}
-          outerRadius={130}
-          cx="50%"
-          cy="75%"
-        >
-          <ChartTooltip
-            cursor={false}
-            content={<ChartTooltipContent hideLabel />}
+      <RadialBarChart
+        data={chartData}
+        endAngle={180}
+        innerRadius={80}
+        outerRadius={130}
+        cx="50%"
+        cy="75%"
+      >
+        <ChartTooltip
+          cursor={false}
+          content={<ChartTooltipContent hideLabel />}
+        />
+        <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
+          <Label
+            content={({ viewBox }) => {
+              if (viewBox && "cx" in viewBox && "cy" in viewBox) {
+                return (
+                  <text x={viewBox.cx} y={viewBox.cy} textAnchor="middle">
+                    <tspan
+                      x={viewBox.cx}
+                      y={(viewBox.cy || 0) - 16}
+                      className="fill-foreground text-2xl font-bold"
+                    >
+                      {`${totalPercentage.toString()}%`}
+                    </tspan>
+                    <tspan
+                      x={viewBox.cx}
+                      y={(viewBox.cy || 0) + 4}
+                      className="fill-muted-foreground"
+                    >
+                      Coverage
+                    </tspan>
+                  </text>
+                );
+              }
+            }}
           />
-          <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
-            <Label
-              content={({ viewBox }) => {
-                if (viewBox && "cx" in viewBox && "cy" in viewBox) {
-                  return (
-                    <text x={viewBox.cx} y={viewBox.cy} textAnchor="middle">
-                      <tspan
-                        x={viewBox.cx}
-                        y={(viewBox.cy || 0) - 16}
-                        className="fill-foreground text-2xl font-bold"
-                      >
-                        {`${totalPercentage.toString()}%`}
-                      </tspan>
-                      <tspan
-                        x={viewBox.cx}
-                        y={(viewBox.cy || 0) + 4}
-                        className="fill-muted-foreground"
-                      >
-                        Coverage
-                      </tspan>
-                    </text>
-                  );
-                }
-              }}
-            />
-          </PolarRadiusAxis>
-          <RadialBar
-            dataKey="accident"
-            stackId="a"
-            cornerRadius={0}
-            fill="var(--color-accident)"
-          />
-          <RadialBar
-            dataKey="hospitalisation"
-            stackId="a"
-            cornerRadius={0}
-            fill="var(--color-hospitalisation)"
-          />
-          <RadialBar
-            dataKey="death"
-            stackId="a"
-            cornerRadius={0}
-            fill="var(--color-death)"
-          />
-          <RadialBar
-            dataKey="disability"
-            stackId="a"
-            cornerRadius={0}
-            fill="var(--color-disability)"
-          />
-          <RadialBar
-            dataKey="criticalIllness"
-            stackId="a"
-            cornerRadius={0}
-            fill="var(--color-criticalIllness)"
-          />
-          <RadialBar
-            dataKey="criticalIllnessEarly"
-            stackId="a"
-            cornerRadius={0}
-            fill="var(--color-criticalIllnessEarly)"
-          />
-          {/* <RadialBar
+        </PolarRadiusAxis>
+        <RadialBar
+          dataKey="accident"
+          stackId="a"
+          cornerRadius={0}
+          fill="var(--color-accident)"
+        />
+        <RadialBar
+          dataKey="hospitalisation"
+          stackId="a"
+          cornerRadius={0}
+          fill="var(--color-hospitalisation)"
+        />
+        <RadialBar
+          dataKey="death"
+          stackId="a"
+          cornerRadius={0}
+          fill="var(--color-death)"
+        />
+        <RadialBar
+          dataKey="disability"
+          stackId="a"
+          cornerRadius={0}
+          fill="var(--color-disability)"
+        />
+        <RadialBar
+          dataKey="criticalIllness"
+          stackId="a"
+          cornerRadius={0}
+          fill="var(--color-criticalIllness)"
+        />
+        <RadialBar
+          dataKey="criticalIllnessEarly"
+          stackId="a"
+          cornerRadius={0}
+          fill="var(--color-criticalIllnessEarly)"
+        />
+        {/* <RadialBar
             dataKey="mobile"
             fill="var(--color-mobile)"
             stackId="a"
             cornerRadius={5}
             className="stroke-transparent stroke-2"
           /> */}
-        </RadialBarChart>
-      </ResponsiveContainer>
+      </RadialBarChart>
     </ChartContainer>
   );
 }

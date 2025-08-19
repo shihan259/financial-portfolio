@@ -1,23 +1,18 @@
 "use client";
 
 import * as React from "react";
-import { HandCoins, HeartPlus, LucideIcon, PiggyBank, Scroll } from "lucide-react";
-import ThemeSwitcher from "@/components/ui/sidebar/theme-switcher";
 import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/shadcn-ui/collapsible";
+  HandCoins,
+  HeartPlus,
+  LucideIcon,
+  PiggyBank,
+  Scroll,
+} from "lucide-react";
+import ThemeSwitcher from "@/components/ui/sidebar/theme-switcher";
 import {
   Sidebar,
   SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
   SidebarRail,
 } from "@/components/shadcn-ui/sidebar";
 import ProfileSwitcher from "./profile-switcher";
@@ -28,7 +23,7 @@ export type NavItem = {
   title: string;
   url: string;
   icon?: LucideIcon;
-  items?: NavItem[]; // Optional nested items
+  items?: NavItem[];
 };
 
 export type NavGroup = {
@@ -53,17 +48,17 @@ const data: Navigation = {
         {
           title: "Coverage",
           url: "/insurance/coverage",
-          icon: HeartPlus
+          icon: HeartPlus,
         },
         {
           title: "Savings",
           url: "/insurance/savings",
-          icon: PiggyBank
+          icon: PiggyBank,
         },
         {
           title: "Investments",
           url: "/insurance/investments",
-          icon: HandCoins
+          icon: HandCoins,
         },
       ],
     },

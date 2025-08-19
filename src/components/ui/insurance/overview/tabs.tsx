@@ -5,7 +5,7 @@ import {
   TabsTrigger,
 } from "@/components/shadcn-ui/tabs";
 import Overview from "@/components/ui/insurance/overview/overview";
-import Timeline from "@/components/ui/timeline/timeline";
+import Timeline from "@/components/ui/insurance/timeline/timeline";
 
 const InsuranceTabs = () => {
   return (
