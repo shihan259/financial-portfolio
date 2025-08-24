@@ -1,5 +1,5 @@
 import { Badge } from "@/components/shadcn-ui/badge";
-import { CoverageType } from "@/types/coverage";
+import { CoverageType } from "@/app/(home)/insurance/coverage/_types/coverage-types";
 
 const CoverageBadges = () => {
   return (

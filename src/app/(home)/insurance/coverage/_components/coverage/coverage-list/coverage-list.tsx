@@ -1,7 +1,6 @@
-import List from "@/components/reusable/list/list";
-import { ListItemProps } from "@/components/reusable/list/list-item";
+import List from "@/components/common/list/list";
+import { ListItemProps } from "@/components/common/list/list-item";
 import { Badge } from "@/components/shadcn-ui/badge";
-import { SidebarProvider } from "@/components/shadcn-ui/sidebar";
 import { BadgeAlertIcon, BadgeCheckIcon } from "lucide-react";
 
 const deathBadge = (

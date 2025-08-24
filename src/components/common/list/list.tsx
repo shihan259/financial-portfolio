@@ -1,4 +1,4 @@
-import ListItem, { ListItemProps } from "@/components/reusable/list/list-item";
+import ListItem, { ListItemProps } from "@/components/common/list/list-item";
 import { cn } from "@/lib/utils";
 import { HTMLProps } from "react";
 
