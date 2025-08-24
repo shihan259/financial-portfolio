@@ -1,6 +1,7 @@
 import List from "@/components/reusable/list/list";
 import { ListItemProps } from "@/components/reusable/list/list-item";
 import { Badge } from "@/components/shadcn-ui/badge";
+import { SidebarProvider } from "@/components/shadcn-ui/sidebar";
 import { BadgeAlertIcon, BadgeCheckIcon } from "lucide-react";
 
 const deathBadge = (
@@ -77,13 +78,109 @@ const listItems: ListItemProps[] = [
     ),
     footerContent: footerInfographic,
   },
+  {
+    headerLabel: "Coverage Insurance Flexi Plan 2",
+    content: (
+      <div className="space-x-2">
+        {deathBadge}
+        {criticalIllnessBadge}
+        {disabilityBadge}
+      </div>
+    ),
+    headerBadge: (
+      <Badge variant="destructive">
+        <BadgeAlertIcon />
+        Over Budget
+      </Badge>
+    ),
+    footerContent: footerInfographic,
+  },
+  {
+    headerLabel: "Coverage Insurance Flexi Plan 2",
+    content: (
+      <div className="space-x-2">
+        {deathBadge}
+        {criticalIllnessBadge}
+        {disabilityBadge}
+      </div>
+    ),
+    headerBadge: (
+      <Badge variant="destructive">
+        <BadgeAlertIcon />
+        Over Budget
+      </Badge>
+    ),
+    footerContent: footerInfographic,
+  },
+  {
+    headerLabel: "Coverage Insurance Flexi Plan 2",
+    content: (
+      <div className="space-x-2">
+        {deathBadge}
+        {criticalIllnessBadge}
+        {disabilityBadge}
+      </div>
+    ),
+    headerBadge: (
+      <Badge variant="destructive">
+        <BadgeAlertIcon />
+        Over Budget
+      </Badge>
+    ),
+    footerContent: footerInfographic,
+  },
+  {
+    headerLabel: "Coverage Insurance Flexi Plan 2",
+    content: (
+      <div className="space-x-2">
+        {deathBadge}
+        {criticalIllnessBadge}
+        {disabilityBadge}
+      </div>
+    ),
+    headerBadge: (
+      <Badge variant="destructive">
+        <BadgeAlertIcon />
+        Over Budget
+      </Badge>
+    ),
+    footerContent: footerInfographic,
+  },
+  {
+    headerLabel: "Coverage Insurance Flexi Plan 2",
+    content: (
+      <div className="space-x-2">
+        {deathBadge}
+        {criticalIllnessBadge}
+        {disabilityBadge}
+      </div>
+    ),
+    headerBadge: (
+      <Badge variant="destructive">
+        <BadgeAlertIcon />
+        Over Budget
+      </Badge>
+    ),
+    footerContent: footerInfographic,
+  },
 ];
 
 const CoverageList = () => {
   return (
-    <div className="w-full">
-      <List items={listItems} listItemStyles="cursor-pointer" />
-    </div>
+    <>
+      <List
+        items={listItems}
+        listItemStyles="cursor-pointer w-auto"
+        componentStyles=" grid gap-4"
+      />
+      {/* <SidebarProvider>
+        <CoverageItemSidebar />
+        <main>
+          <SidebarTrigger />
+          {children}
+        </main>
+      </SidebarProvider> */}
+    </>
   );
 };
 

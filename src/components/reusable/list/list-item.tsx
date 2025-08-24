@@ -27,7 +27,7 @@ const ListItem: React.FC<ListItemProps> = ({
   onClick,
 }) => {
   return (
-    <Card className={cn("w-full gap-2", componentStyles)} onClick={onClick}>
+    <Card className={cn("", componentStyles)} onClick={onClick}>
       {/* Header */}
       <CardHeader className="flex flex-row items-center">
         <CardTitle>{headerLabel}</CardTitle>

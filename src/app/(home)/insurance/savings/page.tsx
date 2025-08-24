@@ -1,6 +1,12 @@
 import NavHeader from "@/components/ui/nav-header/nav-header";
 
-export default function Page() {
+async function fetchData() {
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+}
+
+export default async function Page() {
+  await fetchData();
+
   return (
     <>
       <NavHeader

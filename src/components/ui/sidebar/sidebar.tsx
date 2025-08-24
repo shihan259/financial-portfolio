@@ -68,7 +68,7 @@ const data: Navigation = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const pathName = usePathname();
   return (
-    <Sidebar {...props}>
+    <Sidebar {...props} collapsible="icon">
       <SidebarHeader>
         <ProfileSwitcher name={"John Doe"} />
       </SidebarHeader>

@@ -12,7 +12,7 @@ export default function Page() {
           Insurance: "/insurance",
         }}
       />
-      <PageContainer>
+      <PageContainer className="">
         <CoverageFilter />
         <CoverageList />
       </PageContainer>

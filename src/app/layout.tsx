@@ -17,7 +17,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <main className="w-full">{children}</main>
+            {children}
           </ThemeProvider>
         </body>
       </html>

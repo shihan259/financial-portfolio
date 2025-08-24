@@ -16,6 +16,7 @@ import {
   CollapsibleContent,
 } from "@radix-ui/react-collapsible";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 interface NavGroupInsuranceProps {
@@ -43,10 +44,10 @@ const InsetNavGroup: React.FC<NavGroupInsuranceProps> = ({ navMain }) => {
                 tooltip={navGroup.title}
                 isActive={pathName === navGroup.url}
               >
-                <a href={navGroup.url}>
+                <Link prefetch={false} href={navGroup.url}>
                   {navGroup.icon && <navGroup.icon />}
                   <span>{navGroup.title}</span>
-                </a>
+                </Link>
               </SidebarMenuButton>
               {navGroup.items?.length ? (
                 <>
@@ -64,10 +65,10 @@ const InsetNavGroup: React.FC<NavGroupInsuranceProps> = ({ navMain }) => {
                             asChild
                             isActive={pathName === subItem.url}
                           >
-                            <a href={subItem.url}>
+                            <Link prefetch={false} href={subItem.url}>
                               {subItem.icon && <subItem.icon />}
                               <span>{subItem.title}</span>
-                            </a>
+                            </Link>
                           </SidebarMenuSubButton>
                         </SidebarMenuSubItem>
                       ))}

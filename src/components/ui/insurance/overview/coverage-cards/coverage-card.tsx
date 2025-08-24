@@ -1,7 +1,5 @@
-import { CardAction } from "@/components/shadcn-ui/card";
-import InsuranceCard from "../../insurance-card";
+import InsuranceCard from "../insurance-card";
 import CoverageBadges from "./coverage-badges";
-import { ChartPieDonutText } from "@/components/ui/charts/donut";
 import { RadialStackedChart } from "@/components/ui/charts/radial-stacked";
 
 const CoverageCard = () => {

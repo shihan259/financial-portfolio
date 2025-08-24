@@ -14,11 +14,15 @@ const List: React.FC<ListProps> = ({
   listItemStyles,
 }) => {
   return (
-    <ul className={cn("space-y-4", componentStyles)}>
+    <div className={cn("", componentStyles)}>
       {items.map((item, index) => (
-        <ListItem key={index} {...item} componentStyles={listItemStyles} />
+        <ListItem
+          key={index}
+          {...item}
+          componentStyles={cn("", listItemStyles)}
+        />
       ))}
-    </ul>
+    </div>
   );
 };
 
