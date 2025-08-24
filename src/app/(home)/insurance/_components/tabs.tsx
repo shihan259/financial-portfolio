@@ -1,13 +1,13 @@
+import Overview from "@/app/(home)/insurance/_components/overview/overview";
+import Timeline from "@/app/(home)/insurance/_components/timeline/timeline";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
 } from "@/components/shadcn-ui/tabs";
-import Overview from "@/components/ui/insurance/overview/overview";
-import Timeline from "@/components/ui/insurance/timeline/timeline";
 
-const InsuranceTabs = () => {
+const OverviewTabs = () => {
   return (
     <div className="center mb-4 w-full">
       <Tabs defaultValue="overview" className="w-full">
@@ -31,4 +31,4 @@ const InsuranceTabs = () => {
   );
 };
 
-export default InsuranceTabs;
+export default OverviewTabs;

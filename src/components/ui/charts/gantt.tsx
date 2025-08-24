@@ -1,18 +1,15 @@
 "use client";
-import { faker } from "@faker-js/faker";
 import {
-  GanttFeatureItem,
+  GanttProvider,
+  GanttTimeline,
+  GanttHeader,
   GanttFeatureList,
   GanttFeatureListGroup,
-  GanttHeader,
+  GanttFeatureItem,
   GanttMarker,
-  GanttProvider,
-  GanttSidebar,
-  GanttSidebarGroup,
-  GanttSidebarItem,
-  GanttTimeline,
   GanttToday,
 } from "@/components/ui/shadcn-io/gantt";
+import { faker } from "@faker-js/faker";
 import { groupBy } from "lodash";
 const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 const statuses = [

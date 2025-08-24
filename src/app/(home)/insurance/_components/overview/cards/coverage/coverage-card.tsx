@@ -1,5 +1,5 @@
-import InsuranceCard from "../insurance-card";
-import CoverageBadges from "./coverage-badges";
+import InsuranceCard from "@/app/(home)/insurance/_components/overview/cards/insurance-card";
+import CoverageBadges from "@/app/(home)/insurance/_components/overview/cards/coverage/coverage-badges";
 import { RadialStackedChart } from "@/components/ui/charts/radial-stacked";
 
 const CoverageCard = () => {

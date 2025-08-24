@@ -1,3 +1,4 @@
+import { NavGroup } from "@/app/_components/sidebar/sidebar";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -9,7 +10,6 @@ import {
   SidebarMenuSubItem,
   SidebarMenuSubButton,
 } from "@/components/shadcn-ui/sidebar";
-import { NavGroup } from "@/components/ui/sidebar/sidebar";
 import {
   Collapsible,
   CollapsibleTrigger,

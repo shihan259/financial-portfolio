@@ -1,6 +1,6 @@
+import CoverageCard from "@/app/(home)/insurance/_components/overview/cards/coverage/coverage-card";
+import InsuranceCard from "@/app/(home)/insurance/_components/overview/cards/insurance-card";
 import GanttChart from "@/components/ui/charts/gantt";
-import InsuranceCard from "@/components/ui/insurance/overview/insurance-card";
-import CoverageCard from "@/components/ui/insurance/overview/coverage-cards/coverage-card";
 
 const Overview = () => {
   return (

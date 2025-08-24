@@ -1,4 +1,4 @@
-import NavHeader from "@/components/ui/nav-header/nav-header";
+import NavHeader from "@/app/_components/nav-header/nav-header";
 
 async function fetchData() {
   await new Promise((resolve) => setTimeout(resolve, 5000));

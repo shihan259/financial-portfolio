@@ -1,7 +1,7 @@
 import { Separator } from "@/components/shadcn-ui/separator";
 import { SidebarTrigger } from "@/components/shadcn-ui/sidebar";
 import React from "react";
-import BreadcrumbNav from "@/components/ui/nav-header/breadcrumb-nav";
+import BreadcrumbNav from "@/app/_components/nav-header/breadcrumb-nav";
 
 interface NavHeaderProps {
   currentPageTitle: string;

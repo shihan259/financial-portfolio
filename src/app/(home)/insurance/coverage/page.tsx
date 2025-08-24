@@ -1,7 +1,7 @@
 import PageContainer from "@/components/reusable/page-container";
-import CoverageFilter from "@/components/ui/insurance/coverage/coverage-filter/coverage-filter";
-import CoverageList from "@/components/ui/insurance/coverage/coverage-list/coverage-list";
-import NavHeader from "@/components/ui/nav-header/nav-header";
+import CoverageFilter from "@/app/(home)/insurance/coverage/_components/coverage/coverage-filter/coverage-filter";
+import CoverageList from "@/app/(home)/insurance/coverage/_components/coverage/coverage-list/coverage-list";
+import NavHeader from "@/app/_components/nav-header/nav-header";
 
 export default function Page() {
   return (

@@ -1,5 +1,3 @@
-// components/ui/page-header/PreviousLinkBreadCrumbItem.tsx
-
 import {
   BreadcrumbItem,
   BreadcrumbLink,

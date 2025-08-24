@@ -8,7 +8,6 @@ import {
   PiggyBank,
   Scroll,
 } from "lucide-react";
-import ThemeSwitcher from "@/components/ui/sidebar/theme-switcher";
 import {
   Sidebar,
   SidebarContent,
@@ -17,7 +16,8 @@ import {
 } from "@/components/shadcn-ui/sidebar";
 import ProfileSwitcher from "./profile-switcher";
 import { usePathname } from "next/navigation";
-import InsetNavGroup from "@/components/ui/sidebar/inset-nav-group";
+import InsetNavGroup from "@/app/_components/sidebar/inset-nav-group";
+import ThemeSwitcher from "@/app/_components/sidebar/theme-switcher";
 
 export type NavItem = {
   title: string;

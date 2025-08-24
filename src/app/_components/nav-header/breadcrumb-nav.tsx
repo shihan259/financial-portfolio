@@ -1,5 +1,6 @@
 "use client";
 
+import PreviousLinkBreadCrumbItem from "@/app/_components/nav-header/previous-breadcrumb-link";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -7,7 +8,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/shadcn-ui/breadcrumb";
-import PreviousLinkBreadCrumbItem from "./previous-breadcrumb-link";
 
 interface NavHeaderProps {
   currentPageTitle: string;

@@ -6,8 +6,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/shadcn-ui/carousel";
-import TimelineItem from "@/components/ui/insurance/timeline/timeline-item";
-import TimelineHeader from "@/components/ui/insurance/timeline/timeline-header";
+import TimelineHeader from "@/app/(home)/insurance/_components/timeline/timeline-header";
+import TimelineItem from "@/app/(home)/insurance/_components/timeline/timeline-item";
 
 export default function Timeline() {
   return (
