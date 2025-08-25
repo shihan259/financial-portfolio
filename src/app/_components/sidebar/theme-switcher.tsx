@@ -22,9 +22,11 @@ import {
   SidebarMenuItem,
 } from "@/components/shadcn-ui/sidebar";
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 
 const ThemeSwitcher = () => {
   const { setTheme, theme } = useTheme();
+  const t = useTranslations("theme");
 
   return (
     <SidebarMenu>
@@ -40,7 +42,7 @@ const ThemeSwitcher = () => {
                 <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
               </div>
               <div className="flex flex-col gap-0.5 leading-none">
-                <span className="font-medium">Theme</span>
+                <span className="font-medium">{t("theme")}</span>
                 <span className="capitalize">{theme}</span>
               </div>
               <ChevronsUpDown className="ml-auto" />
@@ -54,19 +56,19 @@ const ThemeSwitcher = () => {
               className="cursor-pointer"
               onClick={() => setTheme("light")}
             >
-              Light
+              {t("light")}
             </DropdownMenuItem>
             <DropdownMenuItem
               className="cursor-pointer"
               onClick={() => setTheme("dark")}
             >
-              Dark
+              {t("dark")}
             </DropdownMenuItem>
             <DropdownMenuItem
               className="cursor-pointer"
               onClick={() => setTheme("system")}
             >
-              System
+              {t("system")}
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

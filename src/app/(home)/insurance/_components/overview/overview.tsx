@@ -5,7 +5,7 @@ import GanttChart from "@/components/ui/charts/gantt";
 const Overview = () => {
   return (
     <>
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 w-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-auto">
         <CoverageCard></CoverageCard>
         <InsuranceCard title={"Savings"}></InsuranceCard>
         <InsuranceCard title={"Investments"}></InsuranceCard>

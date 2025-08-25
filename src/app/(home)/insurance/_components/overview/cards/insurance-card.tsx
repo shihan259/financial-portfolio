@@ -1,5 +1,6 @@
 import {
   Card,
+  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
@@ -11,6 +12,7 @@ import * as motion from "motion/react-client";
 interface InsuranceCardProps {
   title: string;
   description?: string | React.ReactNode;
+  action?: string | React.ReactNode;
   children?: React.ReactNode;
   // chart
 }
@@ -18,6 +20,7 @@ interface InsuranceCardProps {
 const InsuranceCard: React.FC<InsuranceCardProps> = ({
   title,
   description,
+  action,
   children,
 }) => {
   return (
@@ -25,8 +28,10 @@ const InsuranceCard: React.FC<InsuranceCardProps> = ({
       <Card className="w-full h-full">
         <CardHeader>
           <CardTitle>{title}</CardTitle>
-          <CardDescription className="mt-2">{description}</CardDescription>
+          <CardDescription className="mt-2 w-full">{description}</CardDescription>
+           <CardAction>{action}</CardAction>
         </CardHeader>
+         
         <CardContent>{children}</CardContent>
       </Card>
     </motion.div>

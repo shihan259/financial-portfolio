@@ -17,5 +17,30 @@
       "savings": "An overview of your savings",
       "investments": "An overview of your investments"
     }
+  },
+  "theme": {
+    "theme": "Theme",
+    "dark": "Dark",
+    "light": "Light",
+    "system": "System"
+  },
+  "overview": {
+    "tabs": {
+      "overview": "Overview",
+      "timeline": "Timeline"
+    },
+    "cards": {
+      "coverage": {
+        "title": "Coverage",
+        "allCoveredMessage": "You're 100% covered",
+        "missingCoverageMessage": "You're still missing coverage in"
+      },
+      "investments": {
+        "title": "Investments"
+      },
+      "savings": {
+        "title": "Savings"
+      }
+    }
   }
 }
