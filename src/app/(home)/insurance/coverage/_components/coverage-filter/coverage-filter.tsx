@@ -1,9 +1,12 @@
+import { Card, CardContent } from "@/components/shadcn-ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
 } from "@/components/shadcn-ui/carousel";
-import { Toggle } from "@radix-ui/react-toggle";
+import { Toggle } from "@/components/shadcn-ui/toggle";
 
 const coverageCategories = [
   "Death",
@@ -24,14 +27,12 @@ const CoverageFilter = () => {
       }}
       className="overflow-x-hidden mask-l-from-98% mask-r-from-98% md:mask-l-from-100% mb-4"
     >
-      <CarouselContent className="max-w-100">
+      <CarouselContent className="w-135 lg:w-auto">
         {Array.from(coverageCategories).map((category, index) => (
           <CarouselItem key={index} className=" basis-auto">
-            {/* <div className=""> */}
             <Toggle className="border rounded" aria-label="Toggle category">
               {category}
             </Toggle>
-            {/* </div> */}
           </CarouselItem>
         ))}
       </CarouselContent>
