@@ -18,6 +18,7 @@ import ProfileSwitcher from "./profile-switcher";
 import { usePathname } from "next/navigation";
 import InsetNavGroup from "@/app/_components/sidebar/inset-nav-group";
 import ThemeSwitcher from "@/app/_components/sidebar/theme-switcher";
+import { useTranslations } from "next-intl";
 
 export type NavItem = {
   title: string;
@@ -37,36 +38,38 @@ export type Navigation = {
   navMain: NavGroup[];
 };
 
-const data: Navigation = {
-  navMain: [
-    // Insurance group
-    {
-      title: "Insurance",
-      url: "/insurance",
-      icon: Scroll,
-      items: [
-        {
-          title: "Coverage",
-          url: "/insurance/coverage",
-          icon: HeartPlus,
-        },
-        {
-          title: "Savings",
-          url: "/insurance/savings",
-          icon: PiggyBank,
-        },
-        {
-          title: "Investments",
-          url: "/insurance/investments",
-          icon: HandCoins,
-        },
-      ],
-    },
-  ],
-};
-
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const pathName = usePathname();
+  const t = useTranslations("pageMetadata.titles");
+
+  const data: Navigation = {
+    navMain: [
+      // Insurance group
+      {
+        title: t("insurance"),
+        url: "/insurance",
+        icon: Scroll,
+        items: [
+          {
+            title: t("coverage"),
+            url: "/insurance/coverage",
+            icon: HeartPlus,
+          },
+          {
+            title: t("savings"),
+            url: "/insurance/savings",
+            icon: PiggyBank,
+          },
+          {
+            title: t("investments"),
+            url: "/insurance/investments",
+            icon: HandCoins,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <Sidebar {...props} collapsible="icon">
       <SidebarHeader>

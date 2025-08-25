@@ -1,5 +1,13 @@
 import { ThemeProvider } from "../themes/theme-provider";
+import { Locale, NextIntlClientProvider } from "next-intl";
 import "./globals.css";
+import { getAppMetadata } from "@/i18n/utils";
+
+export const generateMetadata = async ({
+  params: { locale },
+}: {
+  params: { locale: Locale };
+}) => getAppMetadata(locale);
 
 export default function RootLayout({
   children,
@@ -11,14 +19,16 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <head />
         <body>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
+          <NextIntlClientProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              {children}
+            </ThemeProvider>
+          </NextIntlClientProvider>
         </body>
       </html>
     </>

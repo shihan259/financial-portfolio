@@ -1,0 +1,21 @@
+{
+  "pageMetadata": {
+    "template": "%s | Financial Portfolio",
+    "default": "Financial Portfolio",
+    "titles": {
+      "login": "Login",
+      "insurance": "Insurance",
+      "coverage": "Coverage",
+      "savings": "Savings",
+      "investments": "Investments"
+    },
+    "descriptions": {
+      "default": "Financial Portfolio",
+      "login": "Login to your account",
+      "insurance": "An overview of insurance policies",
+      "coverage": "An overview of your coverage",
+      "savings": "An overview of your savings",
+      "investments": "An overview of your investments"
+    }
+  }
+}
