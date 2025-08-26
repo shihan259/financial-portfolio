@@ -18,6 +18,9 @@
       "investments": "An overview of your investments"
     }
   },
+  "sidebar": {
+    "groups": "Groups"
+  },
   "theme": {
     "theme": "Theme",
     "dark": "Dark",

@@ -24,7 +24,7 @@ const ProfileSwitcher: React.FC<ProfileSwitcherProps> = ({ name }) => {
     <SidebarMenu>
       <SidebarMenuItem>
         <DropdownMenu>
-          <DropdownMenuTrigger asChild >
+          <DropdownMenuTrigger asChild>
             <SidebarMenuButton
               size="lg"
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground cursor-pointer"
@@ -38,7 +38,7 @@ const ProfileSwitcher: React.FC<ProfileSwitcherProps> = ({ name }) => {
               </div>
               <ChevronsUpDown className="ml-auto" />
             </SidebarMenuButton>
-          </DropdownMenuTrigger >
+          </DropdownMenuTrigger>
           <DropdownMenuContent
             className="w-(--radix-dropdown-menu-trigger-width) z-(--z-sidebar)"
             align="start"

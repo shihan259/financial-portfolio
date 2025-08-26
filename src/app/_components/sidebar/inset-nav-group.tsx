@@ -16,6 +16,7 @@ import {
   CollapsibleContent,
 } from "@radix-ui/react-collapsible";
 import { ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -25,9 +26,11 @@ interface NavGroupInsuranceProps {
 
 const InsetNavGroup: React.FC<NavGroupInsuranceProps> = ({ navMain }) => {
   const pathName = usePathname();
+  const t = useTranslations("sidebar");
+
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>Groups</SidebarGroupLabel>
+      <SidebarGroupLabel>{t("groups")}</SidebarGroupLabel>
       <SidebarMenu>
         {navMain.map((navGroup) => (
           <Collapsible
